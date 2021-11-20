@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "cypress": "^9.0.0",
+    "prettier": "^2.4.1"
+  },
+  "scripts": {
+    "cypress": "cypress open"
+  }
+}
