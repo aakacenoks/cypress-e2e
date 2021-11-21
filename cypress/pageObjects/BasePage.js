@@ -22,4 +22,8 @@ export class BasePage {
   static cookieNotExist(name) {
     cy.getCookie(name).should("not.exist");
   }
+
+  static selectOption(selector, option) {
+    cy.get(selector).select(option)
+  }
 }

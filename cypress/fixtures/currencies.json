@@ -1,0 +1,24 @@
+{
+  "fiatValues": {
+    "USD": {
+      "multiplier": 1,
+      "symbol": "$"
+    },
+    "EUR": {
+      "multiplier": 0.85,
+      "symbol": "€"
+    },
+    "GBP": {
+      "multiplier": 0.75,
+      "symbol": "£"
+    },
+    "CNY": {
+      "multiplier": 6.5,
+      "symbol": "¥"
+    }
+  },
+  "tokenValues": {
+    "usd-coin": "1",
+    "btc": "60000"
+  }
+}

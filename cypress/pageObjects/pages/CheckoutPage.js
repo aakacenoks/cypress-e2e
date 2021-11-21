@@ -13,7 +13,7 @@ export class CheckoutPage extends BasePage {
   static setupForCartCases(username, addedItems) {
     cy.setAddedItems(addedItems);
     cy.setLoginCookies(username);
-    cy.visit("https://www.saucedemo.com/cart.html", {
+    cy.visit("cart.html", {
       failOnStatusCode: false,
     });
   }

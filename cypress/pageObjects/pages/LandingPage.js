@@ -6,10 +6,12 @@ const LOGIN_BUTTON = ".submit-button";
 const LOGIN_COOKIE_NAME = "standard_user";
 
 export class LandingPage extends BasePage {
-  static login(username) {
+  static login(user) {
     cy.visit("https://www.saucedemo.com/");
-    this.type(USERNAME_FIELD, username);
-    this.type(PASSWORD_FIELD, "secret_sauce");
+    cy.fixture("testUsers").then((fixture) => {
+      this.type(USERNAME_FIELD, fixture[user].username);
+      this.type(PASSWORD_FIELD, fixture[user].password);
+    })
     this.click(LOGIN_BUTTON);
   }
 

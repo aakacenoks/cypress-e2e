@@ -1,0 +1,187 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 4,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-11-21T10:43:32.211Z",
+    "end": "2021-11-21T10:43:54.573Z",
+    "duration": 22362,
+    "testsRegistered": 5,
+    "passPercent": 80,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "83f1bef1-7ca7-43fb-ae9d-8a980b3b7e57",
+      "title": "",
+      "fullFile": "cypress/integration/4-workshop-day2/logout.spec.js",
+      "file": "cypress/integration/4-workshop-day2/logout.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d68b3ba5-36a5-4315-bebe-dc70b19a3cc8",
+          "title": "Login test cases",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login with standard user",
+              "fullTitle": "Login test cases Login with standard user",
+              "timedOut": null,
+              "duration": 4867,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.saucedemo.com/\");\ncy.get(\"[data-test=username]\").type(\"standard_user\");\ncy.get(\"#password\").type(\"secret_sauce\");\ncy.get(\".submit-button\").click();\ncy.get(\".header_secondary_container\").should(\"be.visible\");\ncy.getCookie(\"session-username\").then(cookie => {\n  // console.log(cookie)\n  expect(cookie.value).to.eq(\"standard_user\");\n});",
+              "err": {},
+              "uuid": "a40510be-fdb6-4498-b16b-64f81a4cb619",
+              "parentUUID": "d68b3ba5-36a5-4315-bebe-dc70b19a3cc8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with standard user on mobile viewport",
+              "fullTitle": "Login test cases Login with standard user on mobile viewport",
+              "timedOut": null,
+              "duration": 4103,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport(\"iphone-6\");\ncy.visit(\"https://www.saucedemo.com/\");\ncy.get(\"[data-test=username]\").type(\"standard_user\");\ncy.get(\"#password\").type(\"secret_sauce\");\ncy.get(\".submit-button\").click();\ncy.get(\".header_secondary_container\").should(\"be.visible\");\ncy.get(\"[data-test*=add-to-cart]\").last().scrollIntoView();",
+              "err": {},
+              "uuid": "caecd22f-941d-40c2-b588-c166ce8adee7",
+              "parentUUID": "d68b3ba5-36a5-4315-bebe-dc70b19a3cc8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Starting test case allready logged in",
+              "fullTitle": "Login test cases Starting test case allready logged in",
+              "timedOut": null,
+              "duration": 1780,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.setLoginCookies(\"standard_user\");\ncy.visit(\"inventory.html\", {\n  failOnStatusCode: false\n});\ncy.get(\".header_secondary_container\").should(\"be.visible\");",
+              "err": {},
+              "uuid": "cbd65584-0f88-42c2-b5b1-4880f26d0681",
+              "parentUUID": "d68b3ba5-36a5-4315-bebe-dc70b19a3cc8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login and logout",
+              "fullTitle": "Login test cases Login and logout",
+              "timedOut": null,
+              "duration": 4083,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_LandingPage.LandingPage.login(\"normal_user\");\n_NavigationBar.NavigationBar.logout();\n_LandingPage.LandingPage.verifyLoginFieldsEmpty();\n_LandingPage.LandingPage.verifyEmptyLoginCookies();",
+              "err": {},
+              "uuid": "cbadb9f3-a938-4540-9473-30618a21a50d",
+              "parentUUID": "d68b3ba5-36a5-4315-bebe-dc70b19a3cc8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with locked out user",
+              "fullTitle": "Login test cases Login with locked out user",
+              "timedOut": null,
+              "duration": 6735,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/screenshots/4-workshop-day2/logout.spec.js/Login test cases -- Login with locked out user (failed).png\"",
+              "code": "_LandingPage.LandingPage.login(\"locked_user\");\n_NavigationBar.NavigationBar.logout();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#react-burger-menu-btn`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#react-burger-menu-btn`, but never found it.\n    at Function.click (https://www.saucedemo.com/__cypress/tests?p=cypress/integration/4-workshop-day2/logout.spec.js:173:8)\n    at Function.logout (https://www.saucedemo.com/__cypress/tests?p=cypress/integration/4-workshop-day2/logout.spec.js:229:10)\n    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress/integration/4-workshop-day2/logout.spec.js:150:34)",
+                "diff": null
+              },
+              "uuid": "d9795a20-3f6b-47bc-86c3-f46efb7280cc",
+              "parentUUID": "d68b3ba5-36a5-4315-bebe-dc70b19a3cc8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a40510be-fdb6-4498-b16b-64f81a4cb619",
+            "caecd22f-941d-40c2-b588-c166ce8adee7",
+            "cbd65584-0f88-42c2-b5b1-4880f26d0681",
+            "cbadb9f3-a938-4540-9473-30618a21a50d"
+          ],
+          "failures": [
+            "d9795a20-3f6b-47bc-86c3-f46efb7280cc"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 21568,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "html": false,
+        "json": true,
+        "overwrite": true,
+        "timestamp": "mmddyyyy-HHMMss"
+      },
+      "version": "6.0.1"
+    }
+  }
+}

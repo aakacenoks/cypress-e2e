@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-21T10:35:02.281Z",
+    "end": "2021-11-21T10:35:06.871Z",
+    "duration": 4590,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "20cf0b87-7395-4dd3-87fe-73c215646bd5",
+      "title": "",
+      "fullFile": "cypress/integration/4-workshop-day2/products.spec.js",
+      "file": "cypress/integration/4-workshop-day2/products.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5cfda2f4-1b52-49a3-849d-cc1eabc0e798",
+          "title": "Products page test cases",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sorting the products list by price - low to high",
+              "fullTitle": "Products page test cases Sorting the products list by price - low to high",
+              "timedOut": null,
+              "duration": 2502,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_LandingPage.LandingPage.login(\"normal_user\");\n_ProductsPage.ProductsPage.sortProductsBy(\"lohi\");\n_ProductsPage.ProductsPage.verifyPricesLowToHigh();",
+              "err": {},
+              "uuid": "cc9cb4df-dfc1-473a-b764-4aab32cdebe9",
+              "parentUUID": "5cfda2f4-1b52-49a3-849d-cc1eabc0e798",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Sorting the products list by price - high to low",
+              "fullTitle": "Products page test cases Sorting the products list by price - high to low",
+              "timedOut": null,
+              "duration": 1886,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_LandingPage.LandingPage.login(\"normal_user\");\n_ProductsPage.ProductsPage.sortProductsBy(\"hilo\");\n_ProductsPage.ProductsPage.verifyPricesHighToLow();",
+              "err": {},
+              "uuid": "6987b8c0-7374-45f1-b25f-c5d6f1d175b4",
+              "parentUUID": "5cfda2f4-1b52-49a3-849d-cc1eabc0e798",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cc9cb4df-dfc1-473a-b764-4aab32cdebe9",
+            "6987b8c0-7374-45f1-b25f-c5d6f1d175b4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4388,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "html": false,
+        "json": true,
+        "overwrite": true,
+        "timestamp": "mmddyyyy-HHMMss"
+      },
+      "version": "6.0.1"
+    }
+  }
+}

@@ -1,3 +1,13 @@
 {
-  "chromeWebSecurity": false
+  "chromeWebSecurity": false,
+  "projectId": "8tazed",
+  "baseUrl": "https://www.saucedemo.com/",
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/results",
+    "html": false,
+    "json": true,
+    "overwrite": true,
+    "timestamp": "mmddyyyy-HHMMss"
+  }
 }
